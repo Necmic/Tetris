@@ -41,7 +41,7 @@ namespace Tetris
         {
             foreach(var p in pList)
             {
-                if (p.x < 0 || p.y < 0 || p.x >= Console.BufferWidth || p.y >= Console.BufferHeight)
+                if (p.X < 0 || p.Y < 0 || p.X >= Console.BufferWidth || p.Y >= Console.BufferHeight)
                     return false;
             }
             return true;
@@ -75,15 +75,15 @@ namespace Tetris
         //        switch (dir)
         //        {
         //            case Direction.LEFT:
-        //                if (p.x <= 0)
+        //                if (p.X <= 0)
         //                    return;
         //                break;
         //            case Direction.RIGHT:
-        //                if (p.x >= w)
+        //                if (p.X >= w)
         //                    return;
         //                break;
         //            case Direction.DOWN:
-        //                if (p.y >= h)
+        //                if (p.Y >= h)
         //                    return;
         //                break;
         //        }
