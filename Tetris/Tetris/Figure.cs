@@ -27,6 +27,16 @@ namespace Tetris
             Draw();
         }
 
+        public void TryRotate()
+        {
+            Hide();
+            var clone = Clone();
+            Rotate(clone);
+            if (VerifyPosition(clone))
+                points = clone;
+            Draw();
+        }
+
         private bool VerifyPosition(Point[] pList)
         {
             foreach(var p in pList)
@@ -86,7 +96,7 @@ namespace Tetris
         //    Draw();
         //}
 
-        public abstract void Rotate();
+        public abstract void Rotate(Point[] pList);
 
         public void Hide()
         {
